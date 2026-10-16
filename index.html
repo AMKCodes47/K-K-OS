@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="K&K OS — The Birthday Edition. Two users. An unreasonable amount of lore.">
+  <title>K&K OS — The Birthday Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js"></script>
+  <script src="custom-overrides.js"></script>
+  <script src="media-manifest.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body class="theme-boot">
+  <div class="noise"></div>
+  <main id="app">
+    <section id="boot-screen" class="screen boot-screen" aria-label="K and K OS startup">
+      <div class="boot-orbit orbit-one"></div><div class="boot-orbit orbit-two"></div>
+      <div class="boot-core"><div class="boot-mark">K<span>&</span>K</div><div class="boot-subtitle">BIRTHDAY OPERATING SYSTEM</div></div>
+      <div class="boot-footer"><span class="tiny-dot"></span><span id="boot-status">INITIALISING PERSONALITY DRIVERS</span><span class="boot-version">BUILD 18.10 / 2026</span></div>
+      <button id="boot-enter" class="boot-enter" type="button">START SYSTEM <span>↗</span></button>
+    </section>
+
+    <section id="user-screen" class="screen user-screen hidden" aria-label="Choose a user">
+      <header class="entry-top"><div class="mini-brand">K&K<span>OS</span></div><div class="system-status"><span class="tiny-dot"></span> ALL SYSTEMS UNREASONABLY OPERATIONAL</div></header>
+      <div class="user-heading"><div class="eyebrow">TWO USERS DETECTED <span>—</span> BIRTHDAY PROTOCOL INITIATED</div><h1>Who are we<br><em>celebrating?</em></h1><p>Choose your profile. Your operating system is waiting.</p></div>
+      <div class="user-cards">
+        <button class="user-card kartik-card" data-user="kartik" type="button">
+          <div class="card-topline"><span>USER_01 / KRTK</span><span class="online-indicator">● ONLINE</span></div>
+          <div class="profile-orbit"><div class="profile-avatar" id="select-avatar-kartik"><span>K</span></div><div class="avatar-ring"></div></div>
+          <div class="user-card-content"><div class="user-callout" id="select-role-kartik">THE TECH DEPARTMENT</div><h2 id="select-name-kartik">Kartik<span>.exe</span></h2><p class="profile-tagline" id="select-tagline-kartik">Probably has an app for this.</p><div class="user-card-bottom"><span>LOAD PERSONALITY</span><span class="arrow-circle">↗</span></div></div>
+          <div class="card-grid"></div>
+        </button>
+        <button class="user-card kritika-card" data-user="kritika" type="button">
+          <div class="card-topline"><span>USER_02 / KRTK.2</span><span class="online-indicator">✦ ONLINE</span></div>
+          <div class="profile-orbit"><div class="profile-avatar" id="select-avatar-kritika"><span>K</span></div><div class="avatar-ring"></div></div>
+          <div class="user-card-content"><div class="user-callout" id="select-role-kritika">THE PLOT TWIST DEPARTMENT</div><h2 id="select-name-kritika">Kritika<span>.exe</span></h2><p class="profile-tagline" id="select-tagline-kritika">Knows how the story ends. Reads it anyway.</p><div class="user-card-bottom"><span>LOAD PERSONALITY</span><span class="arrow-circle">↗</span></div></div>
+          <div class="card-grid"></div>
+        </button>
+      </div>
+      <footer class="entry-footer"><span>PRIVATE THOUGHTS / PUBLIC CHAOS</span><span>MADE WITH QUESTIONABLE AMOUNTS OF AFFECTION</span></footer>
+    </section>
+
+    <section id="desktop-screen" class="screen desktop-screen hidden" aria-label="Personal desktop">
+      <div class="desktop-backdrop"></div>
+      <header class="taskbar topbar">
+        <button id="desktop-brand" class="taskbar-brand" type="button" title="Back to user selection">K&K <span>OS</span></button>
+        <div class="topbar-center"><span class="topbar-signal">●</span><span id="topbar-user">KARTIK PERSONAL SYSTEM</span></div>
+        <div class="topbar-right"><span id="topbar-clock">00:00</span><button id="edit-toggle" class="edit-toggle" type="button">✎ EDIT MODE</button><button id="user-switch" class="icon-button" type="button" title="Switch user">⇄</button></div>
+      </header>
+      <div id="desktop-welcome" class="desktop-welcome"><div class="welcome-eyebrow" id="welcome-date">PERSONAL SPACE / 18.10</div><div class="welcome-name" id="welcome-name">Good chaos,<br><em>Kartik.</em></div><div class="welcome-subtitle" id="welcome-subtitle">Everything is under control. Allegedly.</div></div>
+      <div id="desktop-icons" class="desktop-icons" aria-label="Apps">
+        <button class="app-icon" data-app="profile" type="button"><span class="app-icon-glyph glyph-profile">◉</span><span>Profile.sys</span></button>
+        <button class="app-icon" data-app="vault" type="button"><span class="app-icon-glyph glyph-vault">▧</span><span>Memory Vault</span></button>
+        <button class="app-icon" data-app="quotes" type="button"><span class="app-icon-glyph glyph-quotes">❞</span><span>Quote Archive.exe</span></button>
+        <button class="app-icon" data-app="lore" type="button"><span class="app-icon-glyph glyph-lore">▤</span><span>The Lore Folder</span></button>
+        <button class="app-icon" data-app="stats" type="button"><span class="app-icon-glyph glyph-stats">↗</span><span>Stats.exe</span></button>
+        <button class="app-icon" data-app="birthday" type="button"><span class="app-icon-glyph glyph-birthday">✳</span><span>Birthday.exe</span></button>
+        <button class="app-icon wrapped-launcher-icon" data-app="wrapped" type="button"><span class="app-icon-glyph glyph-wrapped">▣</span><span>Wrapped.exe</span></button>
+      </div>
+      <div id="window-layer" class="window-layer"></div>
+      <aside id="edit-panel" class="edit-panel hidden" aria-label="Local edit mode">
+        <div class="edit-panel-head"><div><div class="eyebrow">LOCAL CUSTOMISATION</div><h2>Make it yours.</h2></div><button id="close-edit" class="icon-button" type="button" aria-label="Close edit mode">×</button></div>
+        <p class="edit-intro">Changes save in this browser automatically. When you're happy, export a publish file and replace <code>custom-overrides.js</code> in your website folder before uploading.</p>
+        <label class="field-label" for="edit-person">EDITING PROFILE</label><select id="edit-person" class="edit-field"><option value="kartik">Kartik</option><option value="kritika">Kritika</option><option value="shared">Shared content</option></select>
+        <div id="edit-fields" class="edit-fields"></div>
+        <div class="edit-actions"><button id="export-overrides" class="primary-button" type="button">↓ EXPORT PUBLISH FILE</button><button id="reset-local" class="secondary-button" type="button">Reset local edits</button></div>
+        <p class="edit-footnote">Tip: source-code edits live in <code>data.js</code>. This panel is for quick changes without digging through the code.</p>
+      </aside>
+      <footer class="taskbar dock"><div class="dock-left"><span class="dock-system-dot"></span><span id="dock-user">KARTIK / PERSONAL SPACE</span></div><div class="dock-apps"><button data-app="profile" type="button" title="Profile">◉</button><button data-app="vault" type="button" title="Memory Vault">▧</button><button data-app="quotes" type="button" title="Quotes">❞</button><button data-app="lore" type="button" title="Lore">▤</button><button data-app="stats" type="button" title="Stats">↗</button><button data-app="birthday" type="button" title="Birthday">✳</button><button class="wrapped-launcher-icon" data-app="wrapped" type="button" title="Wrapped Studio">▣</button></div><div class="dock-right">K&K OS <span>•</span> BUILD 18.10</div></footer>
+    </section>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </main>
+</body>
+</html>
